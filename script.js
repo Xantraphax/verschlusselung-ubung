@@ -37,7 +37,7 @@ function newWord() {
 
 // Überprüfen
 document.getElementById("checkBtn").addEventListener("click", () => {
-    const guess = document.getElementById("userGuess").trim().toLowerCase();
+    const guess = document.getElementById("userGuess").value.trim().toLowerCase();
     if (guess === originalWord) {
         document.getElementById("feedback").textContent = "✅ Richtig!";
         document.getElementById("feedback").style.color = "green";
@@ -49,3 +49,4 @@ document.getElementById("checkBtn").addEventListener("click", () => {
 
 // Neues Wort Button
 document.getElementById("newWordBtn").addEventListener("click", newWord);
+
